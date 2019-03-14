@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
+from .models import Post
 
 
 def index(request):
-    return HttpResponse('Hey it works!')
+    return render(request, 'index.html', {'posts': Post.objects.all()})

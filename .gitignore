@@ -1,1 +1,7 @@
 db.sqlite3
+blog/__iniy__.py
+blog/__pycache__/
+blog/migrations/
+lug_website/__pycache__/
+lug_website/__init.py
+media/
