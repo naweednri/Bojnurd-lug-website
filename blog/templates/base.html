@@ -17,6 +17,17 @@
         <!-- Custom styles for this template -->
         <link href="{% static 'css/blog-home.css' %}" rel="stylesheet">
       
+        <script>
+          function send_comment(id){
+            var text = document.getElementById('texta').value;
+            $.ajax({
+              type: "POST",
+              data: {id: id, csrfmiddlewaretoken: '{{ csrf_token }}', text: text},
+              url: "/comment/"
+            })
+          }
+        </script>
+
       </head>
 
 <body>
